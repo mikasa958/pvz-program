@@ -1,0 +1,53 @@
+game:
+  window_width: 800
+  window_height: 600
+  fps: 60
+  duration_seconds: 180.0
+  random_seed: 42
+  state_resource_bucket_size: 25
+  state_resource_bucket_max: 40
+  state_time_bucket_size: 5.0
+  state_time_bucket_max: 36
+  state_spawn_bucket_max: 10
+
+map:
+  rows: 5
+  cols: 9
+  cell_size: 80
+  origin_x: 40
+  origin_y: 100
+
+base:
+  hp: 10
+  damage: 1
+
+resource:
+  initial: 100
+  income_per_second: 5
+
+tower:
+  cost: 50
+  damage: 20
+  range_cells: 3
+  cooldown_seconds: 1.0
+  width: 52
+  height: 52
+
+enemy:
+  hp: 60
+  speed: 40.0
+  width: 44
+  height: 44
+  reward_score: 20
+
+wave:
+  spawn_interval_seconds: 3.0
+
+reward:
+  kill: 10.0
+  breach: -10.0
+  invalid_action: -1.0
+  survive_per_step: 0.1
+  win: 100.0
+  lose: -100.0
+
