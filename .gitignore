@@ -1,0 +1,53 @@
+# Local archives, installers, recordings, and historical versions
+/.local-archive/
+
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Build tools and generated packages
+.build_tools/
+.pip_cache/
+.pyinstaller_build/
+build/
+dist/
+*.egg-info/
+*.exe
+*.dll
+*.pyd
+*.zip
+*.7z
+
+# Game logs and training output
+logs/
+models/
+outputs/
+*.sqlite3
+*.sqlite3-*
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.idea/
+.vscode/
+
+# OS and Office temporary files
+[Dd]esktop.ini
+Thumbs.db
+.DS_Store
+~$*
+*.tmp
+*.bak

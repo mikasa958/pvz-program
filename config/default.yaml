@@ -1,0 +1,111 @@
+game:
+  window_width: 800
+  window_height: 600
+  fps: 60
+  duration_seconds: 180.0
+  random_seed: 42
+  total_waves: 5
+  wave_base_enemy_count: 4
+  wave_enemy_count_step: 2
+  wave_spawn_interval_decay: 0.12
+  wave_clear_bonus_resources: 20
+  upgrade_offer_size: 3
+  auto_select_upgrades: true
+  map_bonus_tile_count: 5
+  state_resource_bucket_size: 25
+  state_resource_bucket_max: 40
+  state_time_bucket_size: 5.0
+  state_time_bucket_max: 36
+  state_spawn_bucket_max: 10
+
+map:
+  rows: 5
+  cols: 9
+  cell_size: 80
+  origin_x: 40
+  origin_y: 100
+  bonus_tiles:
+    - normal
+    - obstacle
+    - attack_highland
+    - fertile_land
+
+base:
+  hp: 10
+  damage: 1
+
+resource:
+  initial: 100
+  income_per_second: 0
+  sky_sun_amount: 25
+  sky_sun_interval_min: 7.5
+  sky_sun_interval_max: 10.0
+  enable_sky_sun: true
+
+tower:
+  type: basic
+  cost: 100
+  damage: 20
+  base_hp: 300
+  range_cells: 9
+  cooldown_seconds: 1.5
+  card_cooldown_seconds: 7.5
+  width: 52
+  height: 52
+
+enemy:
+  hp: 270
+  speed: 16.0
+  width: 44
+  height: 44
+  reward_score: 20
+  attack_damage: 100
+  attack_cooldown_seconds: 1.0
+  archetypes:
+    normal:
+      hp_multiplier: 1.0
+      speed_multiplier: 1.0
+    pole_vaulting:
+      hp_multiplier: 1.2592592593
+      speed_multiplier: 1.0
+      speed_fast_multiplier: 2.0
+      can_jump_first_plant: true
+    buckethead:
+      hp_multiplier: 5.0740740741
+      speed_multiplier: 1.0
+    fast:
+      hp_multiplier: 1.2592592593
+      speed_multiplier: 1.0
+      speed_fast_multiplier: 2.0
+      can_jump_first_plant: true
+    tank:
+      hp_multiplier: 5.0740740741
+      speed_multiplier: 1.0
+
+wave:
+  modifier_pool:
+    - steady
+    - fast_attack
+    - thick_armor
+    - number_pressure
+    - single_lane
+
+upgrade:
+  pool:
+    - damage_up
+    - attack_speed_up
+    - hp_up
+    - wallnut_hp_up
+    - sun_up
+    - kill_sun_bonus
+    - cost_down
+    - cooldown_down
+
+reward:
+  kill: 10.0
+  breach: -10.0
+  invalid_action: -1.0
+  survive_per_step: 0.1
+  wave_clear: 8.0
+  win: 100.0
+  lose: -100.0

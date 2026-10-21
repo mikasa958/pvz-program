@@ -1,0 +1,14 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf whitespace=-blank-at-eol
+*.txt text eol=lf
+*.toml text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.spec text eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.png binary
+*.jpg binary
+*.doc binary
+*.docx binary
